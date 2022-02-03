@@ -1,14 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    wadfa = 0
     koekjes += 1
-    basic.showLeds(`
-        . # # # .
-        # # # # #
-        # # # # #
-        # # # # #
-        . # # # .
-        `)
-    wadfa = 1
 })
 input.onButtonPressed(Button.B, function () {
     if (koekjes >= 15) {
@@ -21,32 +12,63 @@ input.onButtonPressed(Button.B, function () {
 })
 let Mouse_clicker_ding = 0
 let koekjes = 0
-let wadfa = 0
-wadfa = 1
+let wadfa = 1
 koekjes = 0
 basic.forever(function () {
-    if (wadfa == 1) {
-        basic.showNumber(koekjes)
-        basic.showLeds(`
-            . . # . .
-            . . # . .
-            . . # . .
-            . . # . .
-            . . # . .
-            `)
-    } else if (Mouse_clicker_ding == 1) {
+    basic.showNumber(koekjes)
+    basic.showLeds(`
+        . . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+})
+basic.forever(function () {
+    if (Mouse_clicker_ding == 2) {
         basic.pause(10000)
         koekjes += 1
-    } else if (Mouse_clicker_ding == 2) {
+    }
+})
+basic.forever(function () {
+    if (Mouse_clicker_ding == 5) {
+        basic.pause(10000)
+        koekjes += 5
+    }
+})
+basic.forever(function () {
+    if (Mouse_clicker_ding == 1) {
         basic.pause(10000)
         koekjes += 2
-    } else {
-        basic.showLeds(`
-            . # # # .
-            # # # # #
-            # # # # #
-            # # # # #
-            . # # # .
-            `)
+    }
+})
+basic.forever(function () {
+    if (Mouse_clicker_ding == 6) {
+        basic.pause(10000)
+        koekjes += 6
+    }
+})
+basic.forever(function () {
+    if (Mouse_clicker_ding == 7) {
+        basic.pause(10000)
+        koekjes += 7
+    }
+})
+basic.forever(function () {
+    if (Mouse_clicker_ding == 8) {
+        basic.pause(10000)
+        koekjes += 8
+    }
+})
+basic.forever(function () {
+    if (Mouse_clicker_ding == 3) {
+        basic.pause(10000)
+        koekjes += 3
+    }
+})
+basic.forever(function () {
+    if (Mouse_clicker_ding == 4) {
+        basic.pause(10000)
+        koekjes += 4
     }
 })
